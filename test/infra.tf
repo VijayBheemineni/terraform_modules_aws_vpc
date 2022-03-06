@@ -13,7 +13,8 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../../vpc"
-  tags   = var.tags
-  vpc    = var.vpc_config
+  source = "git::https://github.com/VijayBheemineni/terraform_modules_aws_vpc.git?ref=v0.1.0"
+  # source = "../../vpc"
+  tags = var.tags
+  vpc  = var.vpc_config
 }

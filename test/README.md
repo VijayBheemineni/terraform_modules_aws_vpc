@@ -1,15 +1,4 @@
 <!-- BEGIN_TF_DOCS -->
-## Description
-    Creates AWS VPC.
-
-    terraform init
-    terraform validate
-    terraform plan
-    terraform apply
-
-## Gotchas
-- Make sure number of public and private subnets are same. 
-
 ## Requirements
 
 | Name | Version |
@@ -25,7 +14,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | ../../vpc | n/a |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git@github.com:VijayBheemineni/terraform_modules_aws_vpc.git | v0.1.0 |
 
 ## Resources
 
@@ -35,7 +24,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map` | <pre>{<br>  "description": "Test VPC",<br>  "name": "team5_vpc_poc",<br>  "terraform_version": "1.1.7"<br>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map` | <pre>{<br>  "description": "Test VPC",<br>  "name": "vpc_poc",<br>  "terraform_version": "1.1.7"<br>}</pre> | no |
 | <a name="input_vpc_config"></a> [vpc\_config](#input\_vpc\_config) | n/a | `map` | <pre>{<br>  "assign_generated_ipv6_cidr_block": false,<br>  "cidr_block": "192.168.1.0/24",<br>  "enable_dns_hostnames": true,<br>  "enable_dns_support": true,<br>  "instance_tenancy": "default",<br>  "map_public_ip_on_launch": true,<br>  "private_subnets_details": {<br>    "private_subnet_aza": {<br>      "availability_zone": "us-east-1a",<br>      "cidr_block": "192.168.1.128/26",<br>      "subnet_type": "private"<br>    },<br>    "private_subnet_azb": {<br>      "availability_zone": "us-east-1b",<br>      "cidr_block": "192.168.1.192/26",<br>      "subnet_type": "private"<br>    }<br>  },<br>  "public_subnets_details": {<br>    "public_subnet_aza": {<br>      "availability_zone": "us-east-1a",<br>      "cidr_block": "192.168.1.0/26",<br>      "subnet_type": "public"<br>    },<br>    "public_subnet_azb": {<br>      "availability_zone": "us-east-1b",<br>      "cidr_block": "192.168.1.64/26",<br>      "subnet_type": "public"<br>    }<br>  }<br>}</pre> | no |
 
 ## Outputs
