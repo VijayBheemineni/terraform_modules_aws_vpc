@@ -47,3 +47,14 @@ No modules.
 | <a name="output_public_subnets_id"></a> [public\_subnets\_id](#output\_public\_subnets\_id) | VPC Public Subnets |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | VPC ID |
 <!-- END_TF_DOCS -->
+
+## Errors
+1)
+Error: error reading Route Table (rtb-07e19056195224e7f): couldn't find resource
+│ 
+│   with module.vpc.aws_route_table.private_rt["private_subnet_azb"],
+│   on .terraform/modules/vpc/vpc.tf line 103, in resource "aws_route_table" "private_rt":
+│  103: resource "aws_route_table" "private_rt" {
+│ 
+╵
+exit status 1
